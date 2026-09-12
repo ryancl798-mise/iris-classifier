@@ -1,10 +1,11 @@
-"""Train a decision tree on the Iris dataset and save an evaluation figure.
+﻿"""Train a decision tree on the Iris dataset, save the model and a figure.
 
 Run from the project root:
     python src/train.py
 """
 from pathlib import Path
 
+import joblib
 import matplotlib
 matplotlib.use("Agg")  # write files, do not open a window
 import matplotlib.pyplot as plt
@@ -40,6 +41,11 @@ def main() -> float:
     out = OUTPUTS / "confusion_matrix.png"
     fig.savefig(out, dpi=150)
     print(f"saved {out}")
+
+    model_path = OUTPUTS / "model.joblib"
+    joblib.dump(model, model_path)
+    print(f"saved {model_path}")
+
     return accuracy
 
 

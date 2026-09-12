@@ -36,7 +36,7 @@ The model classifies all 30 flowers in the held-out test set correctly, giving 1
     notebooks/    iris_model.ipynb, the walk-through
     src/          train.py, the reproducible script
     tests/        test_train.py
-    outputs/      confusion_matrix.png, written by train.py
+    outputs/      confusion_matrix.png and model.joblib, written by train.py
 
 ## License
 
